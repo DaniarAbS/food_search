@@ -76,7 +76,7 @@ const aiFoods = computed(() =>
 )
 
 async function handleAiSubmit(request: AiRequest) {
-  await submitAiFood(request)
+  await submitAiFood(request, foods.value)
 
   if (!aiError.value) {
     openAiFood.value = false
